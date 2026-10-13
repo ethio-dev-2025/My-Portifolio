@@ -65,12 +65,12 @@ export default function Hero() {
               <div className="relative flex flex-col justify-center gap-4 md:gap-5 h-full">
 
                 {/* Name */}
-                <p className="text-xl md:text-2xl font-bold text-white tracking-tight">
-                  Hi, I'm Melkamu <span className="inline-block">👋</span>
+                <p className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                  Hi, I'm Melkamu Enyew <span className="inline-block">👋</span>
                 </p>
 
                 {/* Typewriter */}
-                <p className="text-sm md:text-base font-mono h-6 flex items-center -mt-1">
+                <p className="text-base md:text-lg font-mono h-7 flex items-center -mt-1">
                   <span className="text-[#14b8a6]">I'm also&nbsp;</span>
                   <span className="text-white">{typed}</span>
                   <span className="text-[#14b8a6] animate-blink ml-0.5">▊</span>
@@ -80,14 +80,14 @@ export default function Hero() {
                 <div className="w-12 h-px bg-[#334155]" />
 
                 {/* Headline */}
-                <h1 className="text-lg md:text-xl lg:text-2xl font-bold tracking-[-0.02em] leading-[1.25]">
+                <h1 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-[-0.02em] leading-[1.25]">
                   <span className="text-white">Building </span>
                   <span className="text-gradient">scalable web apps</span>
                   <span className="text-white"> with clean architecture and thoughtful UX.</span>
                 </h1>
 
                 {/* Tagline */}
-                <p className="text-sm md:text-base text-zinc-400 max-w-xl leading-relaxed">
+                <p className="text-base md:text-lg text-white max-w-xl leading-relaxed">
                   I turn complex requirements into clean, scalable products —
                   designing APIs with FastAPI, building interfaces with React,
                   and shipping them end-to-end to the cloud.
@@ -103,9 +103,9 @@ export default function Hero() {
                   ].map((item) => (
                     <div
                       key={item}
-                      className="flex items-start gap-2 text-xs md:text-sm text-zinc-400"
+                      className="flex items-start gap-2 text-sm md:text-base text-white"
                     >
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#14b8a6] shrink-0" />
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#14b8a6] shrink-0" />
                       <span className="leading-snug">{item}</span>
                     </div>
                   ))}
@@ -132,7 +132,7 @@ export default function Hero() {
                   </a>
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 border border-[#334155] hover:border-zinc-500 hover:bg-[#0f172a] px-5 md:px-6 py-2.5 rounded-lg transition-colors outline-none focus:outline-none"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-white border border-[#334155] hover:border-zinc-500 hover:bg-[#0f172a] px-5 md:px-6 py-2.5 rounded-lg transition-colors outline-none focus:outline-none"
                   >
                     <svg
                       width="14"

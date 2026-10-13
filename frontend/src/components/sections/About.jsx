@@ -32,10 +32,10 @@ export default function About() {
             {/* Accent corner glow */}
             <div className="pointer-events-none absolute -top-20 -right-20 w-56 h-56 rounded-full bg-[#14b8a6]/8 blur-[100px]" />
 
-            <div className="relative flex flex-col justify-center gap-5 text-zinc-400 h-full">
+            <div className="relative flex flex-col justify-center gap-5 text-white h-full">
 
               {/* Opening line */}
-              <p className="text-xl lg:text-2xl font-semibold text-white leading-snug">
+              <p className="text-2xl lg:text-3xl font-semibold text-white leading-snug">
                 I'm a{" "}
                 <span className="text-[#14b8a6]">self-taught</span> full-stack
                 developer based in Bahir Dar, Ethiopia.
@@ -44,35 +44,35 @@ export default function About() {
               {/* Divider */}
               <div className="w-12 h-px bg-[#334155]" />
 
-              <p className="text-base leading-relaxed">
+              <p className="text-lg leading-relaxed text-white">
                 I studied at{" "}
-                <span className="text-zinc-200 font-medium">Injibara University</span>,
+                <span className="text-white font-semibold">Injibara University</span>,
                 but my real education has come from{" "}
-                <span className="text-zinc-200 font-medium">five years of building things</span>,
+                <span className="text-white font-semibold">five years of building things</span>,
                 breaking them, and rebuilding them better.
               </p>
 
-              <p className="text-base leading-relaxed">
+              <p className="text-lg leading-relaxed text-white">
                 Today I work as a{" "}
-                <span className="text-zinc-200 font-medium">self-employed full-stack developer</span>.
+                <span className="text-white font-semibold">self-employed full-stack developer</span>.
                 My main project is a{" "}
-                <span className="text-[#14b8a6] font-medium">
+                <span className="text-[#14b8a6] font-semibold">
                   real-estate listing and rental management system
                 </span>{" "}
                 — handling everything from property listings and tenant onboarding
                 to rental agreements and admin dashboards. I build the entire stack:{" "}
-                <span className="text-zinc-200 font-medium">React</span> and{" "}
-                <span className="text-zinc-200 font-medium">Vite</span> on the frontend,{" "}
-                <span className="text-zinc-200 font-medium">Tailwind CSS</span> for the interface,{" "}
-                <span className="text-zinc-200 font-medium">FastAPI</span> for the backend, and{" "}
-                <span className="text-zinc-200 font-medium">PostgreSQL</span> for the data layer.
+                <span className="text-white font-semibold">React</span> and{" "}
+                <span className="text-white font-semibold">Vite</span> on the frontend,{" "}
+                <span className="text-white font-semibold">Tailwind CSS</span> for the interface,{" "}
+                <span className="text-white font-semibold">FastAPI</span> for the backend, and{" "}
+                <span className="text-white font-semibold">PostgreSQL</span> for the data layer.
               </p>
 
-              <p className="text-base leading-relaxed">
+              <p className="text-lg leading-relaxed text-white">
                 I like problems where the{" "}
-                <span className="text-zinc-200 font-medium">database design</span>, the{" "}
-                <span className="text-zinc-200 font-medium">API</span>, and the{" "}
-                <span className="text-zinc-200 font-medium">UI</span> all have to line up.
+                <span className="text-white font-semibold">database design</span>, the{" "}
+                <span className="text-white font-semibold">API</span>, and the{" "}
+                <span className="text-white font-semibold">UI</span> all have to line up.
                 Real-estate software is full of those — listings, leases, payments,
                 permissions — and getting the details right matters to the people who
                 use it every day.
@@ -80,47 +80,47 @@ export default function About() {
 
               {/* Currently */}
               <div className="pt-3">
-                <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-3">
+                <p className="text-sm uppercase tracking-[0.2em] text-white font-bold mb-3">
                   Currently
                 </p>
                 <ul className="space-y-2">
                   <Bullet>
                     Building a{" "}
-                    <span className="text-zinc-200 font-medium">
+                    <span className="text-white font-semibold">
                       real-estate listing and rental management system
                     </span>{" "}
                     with React, FastAPI, and PostgreSQL
                   </Bullet>
                   <Bullet>
                     Working as a{" "}
-                    <span className="text-zinc-200 font-medium">self-employed full-stack developer</span>,
+                    <span className="text-white font-semibold">self-employed full-stack developer</span>,
                     handling design, development, and deployment end to end
                   </Bullet>
                   <Bullet>
                     Sharpening my backend skills with{" "}
-                    <span className="text-zinc-200 font-medium">API design, auth, and database modeling</span>
+                    <span className="text-white font-semibold">API design, auth, and database modeling</span>
                   </Bullet>
                 </ul>
               </div>
 
               {/* Goals */}
               <div className="pt-1">
-                <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-semibold mb-3">
+                <p className="text-sm uppercase tracking-[0.2em] text-white font-bold mb-3">
                   Goals for 2026
                 </p>
                 <ul className="space-y-2">
                   <Bullet>
                     Launch the real-estate platform publicly and{" "}
-                    <span className="text-zinc-200 font-medium">onboard the first paying customers</span>
+                    <span className="text-white font-semibold">onboard the first paying customers</span>
                   </Bullet>
                   <Bullet>
                     Contribute to an{" "}
-                    <span className="text-zinc-200 font-medium">open-source project</span>{" "}
+                    <span className="text-white font-semibold">open-source project</span>{" "}
                     in the Python or React ecosystem
                   </Bullet>
                   <Bullet>
                     Grow into a role where I can{" "}
-                    <span className="text-zinc-200 font-medium">mentor junior developers</span>{" "}
+                    <span className="text-white font-semibold">mentor junior developers</span>{" "}
                     and work on larger-scale products
                   </Bullet>
                 </ul>
@@ -136,8 +136,8 @@ export default function About() {
 
 function Bullet({ children }) {
   return (
-    <li className="flex gap-3 text-zinc-400 text-sm leading-relaxed">
-      <span className="mt-2 w-1 h-1 rounded-full bg-zinc-500 shrink-0" />
+    <li className="flex gap-3 text-white text-base leading-relaxed">
+      <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#14b8a6] shrink-0" />
       <span>{children}</span>
     </li>
   );

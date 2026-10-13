@@ -1,32 +1,38 @@
 {
-  "Frontend": {
-    "level": "Advanced",
-    "proficiency": 90,
-    "items": ["React", "Vite", "Tailwind CSS", "JavaScript (ES2023)", "HTML5 & CSS3", "Responsive Design"]
-  },
-  "Backend": {
-    "level": "Advanced",
-    "proficiency": 88,
-    "items": ["FastAPI", "Python 3.12", "REST API Design", "Pydantic", "SQLAlchemy", "JWT Authentication"]
-  },
-  "Databases": {
-    "level": "Advanced",
-    "proficiency": 85,
-    "items": ["PostgreSQL", "Database Modeling", "SQL Queries & Joins", "Migrations", "SQLite"]
-  },
-  "Tools & Workflow": {
-    "level": "Advanced",
-    "proficiency": 87,
-    "items": ["Git & GitHub", "VS Code", "Postman", "Linux / Bash", "npm & Vite CLI"]
-  },
-  "Deployment": {
-    "level": "Intermediate",
-    "proficiency": 78,
-    "items": ["Vercel", "Render", "Docker", "Environment Config", "CI Basics"]
-  },
-  "Currently Learning": {
-    "level": "Growing",
-    "proficiency": 60,
-    "items": ["TypeScript", "Redis", "Testing (Pytest, Vitest)", "System Design", "WebSockets"]
-  }
+  "Frontend": [
+    { "name": "React", "level": 92 },
+    { "name": "Tailwind CSS", "level": 90 },
+    { "name": "TypeScript / JavaScript", "level": 85 },
+    { "name": "Vite", "level": 88 }
+  ],
+  "Backend": [
+    { "name": "Python", "level": 90 },
+    { "name": "FastAPI", "level": 88 },
+    { "name": "PostgreSQL", "level": 85 },
+    { "name": "REST API Design", "level": 86 }
+  ],
+  "Tools & Workflow": [
+    { "name": "Git & GitHub", "level": 90 },
+    { "name": "VS Code", "level": 92 },
+    { "name": "Postman", "level": 85 },
+    { "name": "Linux / Bash", "level": 78 }
+  ],
+  "Deployment": [
+    { "name": "Vercel", "level": 88 },
+    { "name": "Render", "level": 82 },
+    { "name": "Docker", "level": 72 },
+    { "name": "Environment Config", "level": 80 }
+  ],
+  "Databases": [
+    { "name": "PostgreSQL", "level": 85 },
+    { "name": "Database Modeling", "level": 82 },
+    { "name": "SQL Queries & Joins", "level": 84 },
+    { "name": "Migrations", "level": 78 }
+  ],
+  "Currently Learning": [
+    { "name": "TypeScript", "level": 70 },
+    { "name": "Redis", "level": 60 },
+    { "name": "Testing (Pytest, Vitest)", "level": 65 },
+    { "name": "System Design", "level": 55 }
+  ]
 }
