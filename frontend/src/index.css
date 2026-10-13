@@ -3,9 +3,10 @@
 @theme {
   --color-accent: #14b8a6;
   --color-accent-2: #0ea5e9;
-  --color-bg: #0a1020;
-  --color-surface: #131a2c;
-  --color-border: #1e2a44;
+  --color-bg: #000000;
+  --color-header: #050810;
+  --color-surface: #0a0a0a;
+  --color-border: #1f1f1f;
   --color-muted: #8b97ad;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -14,11 +15,11 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #0a1020;
+  background-color: #000000;
 }
 
 body {
-  background-color: #0a1020;
+  background-color: #000000;
   color: #f1f5f9;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -28,64 +29,17 @@ body {
 
 ::selection {
   background-color: #14b8a6;
-  color: #0a1020;
+  color: #000000;
 }
 
 /* ---------- Custom scrollbar ---------- */
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #0a1020; }
-::-webkit-scrollbar-thumb { background: #1e2a44; border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: #2a3a5c; }
+::-webkit-scrollbar-track { background: #000000; }
+::-webkit-scrollbar-thumb { background: #1f1f1f; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #2a2a2a; }
 
 /* ============================================================
-   BACKGROUND SYSTEM — 4 layers, all barely visible
-   ============================================================ */
-
-/* Layer 1 — Base radial glows (behind everything) */
-.page-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -3;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 80% 55% at 50% -10%, rgba(20, 184, 166, 0.12), transparent 70%),
-    radial-gradient(ellipse 60% 50% at 100% 40%, rgba(14, 165, 233, 0.09), transparent 70%),
-    radial-gradient(ellipse 60% 50% at 0% 75%, rgba(20, 184, 166, 0.07), transparent 70%);
-}
-
-/* Layer 2 — Subtle grid pattern, fades toward bottom */
-.grid-bg {
-  background-image:
-    linear-gradient(to right, rgba(148, 163, 184, 0.055) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.055) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse 90% 70% at 50% 15%, #000 40%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 15%, #000 40%, transparent 100%);
-  pointer-events: none;
-}
-
-/* Layer 3 — Film grain noise (the premium secret sauce) */
-.noise-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  opacity: 0.028;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
-
-/* Layer 4 — Edge vignette (subtle depth darkening) */
-.vignette {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 110% 90% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.35) 100%);
-}
-
-/* ============================================================
-   TEXT GRADIENT — teal-to-blue for headline accents
+   TEXT GRADIENT
    ============================================================ */
 .text-gradient {
   background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 100%);
@@ -95,7 +49,7 @@ body {
 }
 
 /* ============================================================
-   SECTION DIVIDER — subtle hairline between sections
+   SECTION DIVIDER
    ============================================================ */
 .section-divider {
   height: 1px;

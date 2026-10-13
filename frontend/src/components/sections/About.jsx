@@ -25,103 +25,101 @@ export default function About() {
           </div>
         </div>
 
-        {/* RIGHT — bio inside rectangle card */}
+        {/* RIGHT — bio (no rectangle frame) */}
         <div className="relative w-full h-full">
-          <div className="relative h-full rounded-2xl border border-[#334155] bg-[#1e293b] p-6 md:p-7 overflow-hidden">
+          <div className="relative h-full p-0 overflow-hidden">
 
-            {/* Accent corner glow */}
-            <div className="pointer-events-none absolute -top-20 -right-20 w-56 h-56 rounded-full bg-[#14b8a6]/8 blur-[100px]" />
-
-            <div className="relative flex flex-col justify-center gap-5 text-white h-full">
+            <div
+              className="relative flex flex-col justify-center gap-5 text-white h-full"
+              style={{ fontFamily: '"Times New Roman", Times, serif' }}
+            >
 
               {/* Opening line */}
-              <p className="text-2xl lg:text-3xl font-semibold text-white leading-snug">
-                I'm a{" "}
-                <span className="text-[#14b8a6]">self-taught</span> full-stack
-                developer based in Bahir Dar, Ethiopia.
+              <p className="text-3xl lg:text-4xl font-bold text-white leading-snug">
+                <span className="text-[#14b8a6]">Self-taught</span> full-stack developer based in Bahir Dar, Ethiopia.
               </p>
 
               {/* Divider */}
               <div className="w-12 h-px bg-[#334155]" />
 
-              <p className="text-lg leading-relaxed text-white">
-                I studied at{" "}
-                <span className="text-white font-semibold">Injibara University</span>,
-                but my real education has come from{" "}
-                <span className="text-white font-semibold">five years of building things</span>,
-                breaking them, and rebuilding them better.
+              <p className="text-xl leading-relaxed text-white">
+                I studied at <span className="font-semibold">Injibara University</span>,
+                but my real education came from{" "}
+                <span className="font-semibold">five years</span> of building,
+                breaking, and rebuilding things.
               </p>
 
-              <p className="text-lg leading-relaxed text-white">
+              <p className="text-xl leading-relaxed text-white">
                 Today I work as a{" "}
-                <span className="text-white font-semibold">self-employed full-stack developer</span>.
-                My main project is a{" "}
+                <span className="font-semibold">self-employed developer</span>. My
+                main project is a{" "}
                 <span className="text-[#14b8a6] font-semibold">
                   real-estate listing and rental management system
                 </span>{" "}
-                — handling everything from property listings and tenant onboarding
-                to rental agreements and admin dashboards. I build the entire stack:{" "}
-                <span className="text-white font-semibold">React</span> and{" "}
-                <span className="text-white font-semibold">Vite</span> on the frontend,{" "}
-                <span className="text-white font-semibold">Tailwind CSS</span> for the interface,{" "}
-                <span className="text-white font-semibold">FastAPI</span> for the backend, and{" "}
-                <span className="text-white font-semibold">PostgreSQL</span> for the data layer.
+                — from property listings and tenant onboarding to lease agreements
+                and admin dashboards. I build the entire stack:{" "}
+                <span className="font-semibold">React + Vite + Tailwind CSS</span>{" "}
+                on the frontend,{" "}
+                <span className="font-semibold">FastAPI + PostgreSQL</span> on the
+                backend.
               </p>
 
-              <p className="text-lg leading-relaxed text-white">
+              <p className="text-xl leading-relaxed text-white">
                 I like problems where the{" "}
-                <span className="text-white font-semibold">database design</span>, the{" "}
-                <span className="text-white font-semibold">API</span>, and the{" "}
-                <span className="text-white font-semibold">UI</span> all have to line up.
-                Real-estate software is full of those — listings, leases, payments,
-                permissions — and getting the details right matters to the people who
-                use it every day.
+                <span className="font-semibold">database design</span>, the{" "}
+                <span className="font-semibold">API</span>, and the{" "}
+                <span className="font-semibold">UI</span> all have to line up —
+                where getting the details right matters to the people using it
+                daily.
               </p>
 
               {/* Currently */}
               <div className="pt-3">
-                <p className="text-sm uppercase tracking-[0.2em] text-white font-bold mb-3">
+                <p
+                  className="text-lg uppercase tracking-[0.15em] text-white font-bold mb-3"
+                  style={{ fontFamily: '"Times New Roman", Times, serif' }}
+                >
                   Currently
                 </p>
                 <ul className="space-y-2">
                   <Bullet>
                     Building a{" "}
-                    <span className="text-white font-semibold">
-                      real-estate listing and rental management system
+                    <span className="font-semibold">
+                      real-estate platform
                     </span>{" "}
                     with React, FastAPI, and PostgreSQL
                   </Bullet>
                   <Bullet>
-                    Working as a{" "}
-                    <span className="text-white font-semibold">self-employed full-stack developer</span>,
-                    handling design, development, and deployment end to end
+                    Running my own development practice —{" "}
+                    <span className="font-semibold">design, code, deploy, support</span>
                   </Bullet>
                   <Bullet>
-                    Sharpening my backend skills with{" "}
-                    <span className="text-white font-semibold">API design, auth, and database modeling</span>
+                    Deepening backend skills:{" "}
+                    <span className="font-semibold">API design, auth, database modeling</span>
                   </Bullet>
                 </ul>
               </div>
 
               {/* Goals */}
               <div className="pt-1">
-                <p className="text-sm uppercase tracking-[0.2em] text-white font-bold mb-3">
+                <p
+                  className="text-lg uppercase tracking-[0.15em] text-white font-bold mb-3"
+                  style={{ fontFamily: '"Times New Roman", Times, serif' }}
+                >
                   Goals for 2026
                 </p>
                 <ul className="space-y-2">
                   <Bullet>
-                    Launch the real-estate platform publicly and{" "}
-                    <span className="text-white font-semibold">onboard the first paying customers</span>
+                    Launch the real-estate platform and{" "}
+                    <span className="font-semibold">onboard the first paying customers</span>
                   </Bullet>
                   <Bullet>
                     Contribute to an{" "}
-                    <span className="text-white font-semibold">open-source project</span>{" "}
-                    in the Python or React ecosystem
+                    <span className="font-semibold">open-source Python or React project</span>
                   </Bullet>
                   <Bullet>
-                    Grow into a role where I can{" "}
-                    <span className="text-white font-semibold">mentor junior developers</span>{" "}
-                    and work on larger-scale products
+                    <span className="font-semibold">Mentor junior developers</span>{" "}
+                    on larger-scale systems
                   </Bullet>
                 </ul>
               </div>
@@ -136,8 +134,11 @@ export default function About() {
 
 function Bullet({ children }) {
   return (
-    <li className="flex gap-3 text-white text-base leading-relaxed">
-      <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#14b8a6] shrink-0" />
+    <li
+      className="flex gap-3 text-white text-lg leading-relaxed"
+      style={{ fontFamily: '"Times New Roman", Times, serif' }}
+    >
+      <span className="mt-3 w-1.5 h-1.5 rounded-full bg-[#14b8a6] shrink-0" />
       <span>{children}</span>
     </li>
   );

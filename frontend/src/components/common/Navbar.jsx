@@ -20,7 +20,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Scroll-spy: highlight the current section
   useEffect(() => {
     const sections = links
       .map((l) => document.querySelector(l.href))
@@ -45,12 +44,11 @@ export default function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0f172a]/80 backdrop-blur-lg border-b border-[#334155]"
-          : "bg-transparent"
+          ? "bg-[#1a2744] border-b-2 border-[#2d4a7c] shadow-2xl shadow-black/60"
+          : "bg-[#1a2744] border-b-2 border-[#1a2744]"
       }`}
     >
-      <nav className="max-w-[1440px] mx-auto flex items-center justify-between px-6 md:px-8 h-20">
-        {/* LEFT — logo + name */}
+      <nav className="max-w-[1800px] mx-auto flex items-center justify-between px-6 md:px-8 h-20">
         <a href="#top" className="flex items-center gap-3 shrink-0">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#14b8a6] to-[#0ea5e9] flex items-center justify-center text-[#0f172a] text-sm font-bold">
             {profile.initials}
@@ -60,7 +58,6 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* RIGHT — nav links */}
         <ul className="hidden lg:flex items-center gap-2">
           {links.map((l) => (
             <li key={l.href}>
@@ -69,7 +66,7 @@ export default function Navbar() {
                 className={`text-base font-bold transition-colors px-4 py-3 rounded-lg ${
                   active === l.href
                     ? "text-[#14b8a6]"
-                    : "text-white hover:text-[#14b8a6] hover:bg-white/[0.04]"
+                    : "text-white hover:text-[#14b8a6] hover:bg-white/[0.08]"
                 }`}
               >
                 {l.label}
@@ -78,7 +75,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile menu button */}
         <button
           onClick={() => setOpen(!open)}
           className="lg:hidden w-10 h-10 flex items-center justify-center text-white"
@@ -94,9 +90,8 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile dropdown */}
       {open && (
-        <div className="lg:hidden border-t border-[#334155] bg-[#0f172a]/95 backdrop-blur-lg">
+        <div className="lg:hidden border-t-2 border-[#2d4a7c] bg-[#1a2744]">
           <ul className="px-6 py-4 space-y-1">
             {links.map((l) => (
               <li key={l.href}>
@@ -105,8 +100,8 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className={`block py-3 px-4 text-base font-bold rounded-lg transition-colors ${
                     active === l.href
-                      ? "text-[#14b8a6] bg-white/[0.04]"
-                      : "text-white hover:text-[#14b8a6] hover:bg-white/[0.04]"
+                      ? "text-[#14b8a6] bg-white/[0.08]"
+                      : "text-white hover:text-[#14b8a6] hover:bg-white/[0.08]"
                   }`}
                 >
                   {l.label}
