@@ -1,0 +1,37 @@
+{
+  "degrees": [
+    {
+      "degree": "B.Sc. in Computer Science",
+      "institution": "University Name",
+      "period": "2016 — 2020",
+      "location": "Addis Ababa, Ethiopia",
+      "relevantCourses": [
+        "Data Structures & Algorithms",
+        "Database Systems",
+        "Web Development",
+        "Operating Systems",
+        "Software Engineering"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Meta Front-End Developer Professional Certificate",
+      "issuer": "Coursera / Meta",
+      "year": "2023",
+      "url": "https://coursera.org/verify/your-cert-id"
+    },
+    {
+      "name": "FastAPI: Modern Python Web Development",
+      "issuer": "Udemy",
+      "year": "2022",
+      "url": "https://udemy.com/certificate/your-id"
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "year": "2023",
+      "url": "https://aws.amazon.com/verification"
+    }
+  ]
+}

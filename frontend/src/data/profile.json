@@ -1,0 +1,18 @@
+{
+  "name": "Melkamu Enyew",
+  "initials": "ME",
+  "role": "Full-Stack Web Application Developer",
+  "tagline": "Self-taught full-stack developer building real-estate and rental management platforms with React, FastAPI, and PostgreSQL.",
+  "available": true,
+  "location": "Bahir Dar, Ethiopia",
+  "email": "melkamuenyew90@gmail.com",
+  "phone": "+251925393559",
+  "avatar": "/images/photo.jpg",
+  "aboutImage": "/images/image.png",
+  "resumeUrl": "/resume.pdf",
+  "social": {
+    "github": "https://github.com/ethio-dev-2025",
+    "linkedin": "https://linkedin.com/in/melkamuenyew",
+    "twitter": "https://twitter.com/melkamuenyew"
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Real-Estate Listing & Rental Management System",
+    "description": "A full web platform for property listings and rental management — handles listings, tenant onboarding, lease agreements, rent tracking, and an admin dashboard. Built end to end as a self-employed developer.",
+    "image": "https://picsum.photos/seed/realestate/1200/750",
+    "tech": ["React", "Vite", "Tailwind CSS", "FastAPI", "PostgreSQL"],
+    "github": "https://github.com/ethio-dev-2025",
+    "demo": null
+  },
+  {
+    "id": 2,
+    "title": "Development — Web & Mobile Projects",
+    "description": "A collection of practical web and mobile applications built to solve real problems. Includes full-stack demos, UI experiments, and hands-on projects that reflect my practical problem-solving approach.",
+    "image": "https://picsum.photos/seed/development/1200/750",
+    "tech": ["HTML", "JavaScript", "Web Apps", "Mobile"],
+    "github": "https://github.com/ethio-dev-2025/development",
+    "demo": null
+  },
+  {
+    "id": 3,
+    "title": "REST API for Property Management",
+    "description": "FastAPI backend powering property listings, tenant records, and rental agreements. Includes JWT authentication, role-based access, and Pydantic validation across all endpoints.",
+    "image": "https://picsum.photos/seed/api/1200/750",
+    "tech": ["FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT"],
+    "github": "https://github.com/ethio-dev-2025/fastapi-tutorial",
+    "demo": null
+  },
+  {
+    "id": 4,
+    "title": "Admin Dashboard for Property Managers",
+    "description": "React + Tailwind admin interface to manage listings, tenants, and rental payments. Includes real-time stats, filtering, and a clean data-table workflow.",
+    "image": "https://picsum.photos/seed/dashboard/1200/750",
+    "tech": ["React", "Vite", "Tailwind CSS", "Recharts"],
+    "github": "https://github.com/ethio-dev-2025",
+    "demo": null
+  },
+  {
+    "id": 5,
+    "title": "FastAPI Tutorial",
+    "description": "A hands-on FastAPI learning project covering routing, request handling, data validation, and API design patterns — the foundation for every backend I build.",
+    "image": "https://picsum.photos/seed/fastapi/1200/750",
+    "tech": ["FastAPI", "Python", "REST API", "Pydantic"],
+    "github": "https://github.com/ethio-dev-2025/fastapi-tutorial",
+    "demo": null
+  },
+  {
+    "id": 6,
+    "title": "Netflix Clone",
+    "description": "A pixel-focused clone of the Netflix interface — built to sharpen layout, responsive design, and CSS fundamentals.",
+    "image": "https://picsum.photos/seed/netflix/1200/750",
+    "tech": ["HTML", "CSS", "Responsive Design"],
+    "github": "https://github.com/ethio-dev-2025/netflix-clone",
+    "demo": null
+  }
+]

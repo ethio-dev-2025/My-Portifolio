@@ -1,0 +1,32 @@
+{
+  "Frontend": {
+    "level": "Advanced",
+    "proficiency": 90,
+    "items": ["React", "Vite", "Tailwind CSS", "JavaScript (ES2023)", "HTML5 & CSS3", "Responsive Design"]
+  },
+  "Backend": {
+    "level": "Advanced",
+    "proficiency": 88,
+    "items": ["FastAPI", "Python 3.12", "REST API Design", "Pydantic", "SQLAlchemy", "JWT Authentication"]
+  },
+  "Databases": {
+    "level": "Advanced",
+    "proficiency": 85,
+    "items": ["PostgreSQL", "Database Modeling", "SQL Queries & Joins", "Migrations", "SQLite"]
+  },
+  "Tools & Workflow": {
+    "level": "Advanced",
+    "proficiency": 87,
+    "items": ["Git & GitHub", "VS Code", "Postman", "Linux / Bash", "npm & Vite CLI"]
+  },
+  "Deployment": {
+    "level": "Intermediate",
+    "proficiency": 78,
+    "items": ["Vercel", "Render", "Docker", "Environment Config", "CI Basics"]
+  },
+  "Currently Learning": {
+    "level": "Growing",
+    "proficiency": 60,
+    "items": ["TypeScript", "Redis", "Testing (Pytest, Vitest)", "System Design", "WebSockets"]
+  }
+}
