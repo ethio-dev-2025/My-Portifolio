@@ -14,61 +14,30 @@ body {
   overflow-x: hidden;
 }
 
-/* Attractive modern background system for all pages and sections */
+/* Clean plain background */
 .site-bg {
   min-height: 100vh;
-  position: relative;
-  background-color: #f1f5f9;
-  background-image:
-    radial-gradient(circle at 50% -10%, rgba(59, 130, 246, 0.22) 0%, transparent 60%),
-    radial-gradient(circle at 100% 25%, rgba(99, 102, 241, 0.18) 0%, transparent 45%),
-    radial-gradient(circle at 0% 60%, rgba(14, 165, 233, 0.16) 0%, transparent 50%),
-    radial-gradient(circle at 85% 90%, rgba(59, 130, 246, 0.14) 0%, transparent 55%),
-    radial-gradient(rgba(148, 163, 184, 0.24) 1.2px, transparent 1.2px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 28px 28px;
-  background-attachment: fixed;
+  background-color: #f8fafc;
 }
 
 .dark .site-bg,
 :root.dark .site-bg {
-  background-color: #080d1a;
-  background-image:
-    radial-gradient(circle at 50% -15%, rgba(37, 99, 235, 0.35) 0%, transparent 60%),
-    radial-gradient(circle at 100% 25%, rgba(124, 58, 237, 0.22) 0%, transparent 45%),
-    radial-gradient(circle at 0% 60%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 85% 90%, rgba(37, 99, 235, 0.18) 0%, transparent 55%),
-    radial-gradient(rgba(255, 255, 255, 0.12) 1.2px, transparent 1.2px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 28px 28px;
-  background-attachment: fixed;
+  background-color: #0a0f1e;
 }
 
-/* Custom standard scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-.dark ::-webkit-scrollbar-thumb {
-  background: #334155;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
-}
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+.dark ::-webkit-scrollbar-thumb { background: #334155; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #475569; }
 
-/* Standard animation */
+/* Typewriter cursor */
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
 }
-
 .animate-blink {
   animation: blink 1s step-end infinite;
 }

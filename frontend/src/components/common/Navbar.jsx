@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import {
   Menu,
   X,
-  FileText,
   Send,
   Home,
   User,
@@ -12,7 +11,6 @@ import {
   ChevronRight
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "./SocialIcons";
 import profile from "../../data/profile.json";
 
 const links = [
@@ -147,21 +145,12 @@ export default function Navbar({ onOpenResume }) {
         </nav>
       </header>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer — fully opaque, z-[60] to cover navbar */}
       {open && (
-        <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-white/95 dark:bg-[#090d16]/95 backdrop-blur-xl">
-          {/* Top Bar */}
+        <div className="fixed inset-0 z-[60] lg:hidden flex flex-col bg-white dark:bg-[#090d16]">
+          {/* Top Bar — no avatar, just Menu label */}
           <div className="flex items-center justify-between px-4 sm:px-6 h-16 border-b border-gray-200 dark:border-gray-800">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full overflow-hidden shadow-sm">
-                <img
-                  src={profile.avatar}
-                  alt={profile.name}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <span className="font-bold text-gray-900 dark:text-white text-base">Menu</span>
-            </div>
+            <span className="font-bold text-gray-900 dark:text-white text-base">Menu</span>
 
             <div className="flex items-center gap-2">
               <ThemeToggle />
@@ -175,8 +164,8 @@ export default function Navbar({ onOpenResume }) {
             </div>
           </div>
 
-          {/* Links & Actions */}
-          <div className="flex-1 overflow-y-auto px-5 py-6 flex flex-col justify-between">
+          {/* Links */}
+          <div className="flex-1 overflow-y-auto px-5 py-6">
             <div className="space-y-1">
               {links.map((l) => {
                 const Icon = l.icon;
@@ -200,58 +189,6 @@ export default function Navbar({ onOpenResume }) {
                   </a>
                 );
               })}
-            </div>
-
-            <div className="pt-6 border-t border-gray-200 dark:border-gray-800 space-y-3">
-              <button
-                onClick={() => {
-                  setOpen(false);
-                  onOpenResume();
-                }}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              >
-                <FileText className="w-4 h-4" />
-                <span>View Resume (CV)</span>
-              </button>
-
-              <a
-                href="#contact"
-                onClick={() => setOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-colors"
-              >
-                <Send className="w-4 h-4" />
-                <span>Get In Touch</span>
-              </a>
-
-              <div className="flex items-center justify-center gap-4 pt-3 text-gray-500 dark:text-gray-400">
-                <a
-                  href={profile.social.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2 hover:text-gray-900 dark:hover:text-white"
-                  aria-label="GitHub"
-                >
-                  <GithubIcon className="w-5 h-5" />
-                </a>
-                <a
-                  href={profile.social.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2 hover:text-gray-900 dark:hover:text-white"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedinIcon className="w-5 h-5" />
-                </a>
-                <a
-                  href={profile.social.twitter}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2 hover:text-gray-900 dark:hover:text-white"
-                  aria-label="Twitter"
-                >
-                  <TwitterIcon className="w-5 h-5" />
-                </a>
-              </div>
             </div>
           </div>
         </div>

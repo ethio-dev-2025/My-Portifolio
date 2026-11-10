@@ -25,7 +25,7 @@ export default function Footer({ onOpenResume }) {
           {/* Left: Brand */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <a href="#top" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full overflow-hidden border border-blue-600 shadow-sm">
+              <div className="w-8 h-8 rounded-full overflow-hidden shadow-sm">
                 <img
                   src={profile.avatar}
                   alt={profile.name}
