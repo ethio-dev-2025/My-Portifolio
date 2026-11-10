@@ -1,145 +1,121 @@
 import SectionHeading from "../common/SectionHeading";
 import profile from "../../data/profile.json";
+import {
+  FileText,
+  Send,
+  CheckCircle2,
+  Building2,
+  GraduationCap
+} from "lucide-react";
 
-export default function About() {
+export default function About({ onOpenResume }) {
   return (
     <section
       id="about"
-      className="relative max-w-[1800px] mx-auto px-6 py-12 border-t border-[#334155]"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-gray-200 dark:border-gray-800"
     >
-      <SectionHeading title="About Me" centered />
+      {/* Centered Heading */}
+      <SectionHeading
+        title="About Me"
+      />
 
-      <div className="grid md:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 xl:gap-16 items-stretch md:min-h-[400px]">
+      {/* 2 Equal Columns: Left = Only Image, Right = Only One Section That Describes Me */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
 
-        {/* LEFT — image */}
-        <div className="relative w-full h-[300px] md:h-auto md:min-h-[400px]">
-          <div className="absolute inset-0 rounded-2xl overflow-hidden">
+        {/* LEFT COLUMN: ONLY IMAGE */}
+        <div className="h-full flex items-center justify-center">
+          <div className="w-full h-full min-h-[380px] sm:min-h-[480px] rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-100 dark:bg-gray-900 shadow-sm">
             <img
               src={profile.aboutImage}
               alt={profile.name}
-              width={720}
-              height={720}
-              className="block w-full h-full object-cover object-top select-none"
-              draggable="false"
+              className="w-full h-full object-cover object-top select-none"
+              loading="lazy"
             />
           </div>
         </div>
 
-        {/* RIGHT — bio (no rectangle frame) */}
-        <div className="relative w-full h-full">
-          <div className="relative h-full p-0 overflow-hidden">
+        {/* RIGHT COLUMN: ONLY ONE SECTION THAT DESCRIBES ME */}
+        <div className="flex flex-col justify-between border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm h-full">
+          <div className="space-y-5">
+            {/* Header Badge */}
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-blue-600" />
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+                Self-Taught Full-Stack Developer
+              </h3>
+            </div>
 
-            <div
-              className="relative flex flex-col justify-center gap-5 text-white h-full"
-              style={{ fontFamily: '"Times New Roman", Times, serif' }}
-            >
+            {/* Narrative Description */}
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              Hi, I'm <strong className="text-gray-900 dark:text-white font-semibold">{profile.name}</strong>, a full-stack web application developer based in Bahir Dar, Ethiopia with over 5 years of practical software engineering experience.
+            </p>
 
-              {/* Opening line */}
-              <p className="text-3xl lg:text-4xl font-bold text-white leading-snug">
-                <span className="text-[#14b8a6]">Self-taught</span> full-stack developer based in Bahir Dar, Ethiopia.
-              </p>
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              I studied Computer Science at <strong className="text-gray-900 dark:text-white font-semibold">Injibara University</strong>, establishing a solid foundation in data structures, algorithms, and relational database systems. Over the years, I forged my capabilities through hands-on architecture, continuous self-learning, and delivering production systems.
+            </p>
 
-              {/* Divider */}
-              <div className="w-12 h-px bg-[#334155]" />
-
-              <p className="text-xl leading-relaxed text-white">
-                I studied at <span className="font-semibold">Injibara University</span>,
-                but my real education came from{" "}
-                <span className="font-semibold">five years</span> of building,
-                breaking, and rebuilding things.
-              </p>
-
-              <p className="text-xl leading-relaxed text-white">
-                Today I work as a{" "}
-                <span className="font-semibold">self-employed developer</span>. My
-                main project is a{" "}
-                <span className="text-[#14b8a6] font-semibold">
-                  real-estate listing and rental management system
-                </span>{" "}
-                — from property listings and tenant onboarding to lease agreements
-                and admin dashboards. I build the entire stack:{" "}
-                <span className="font-semibold">React + Vite + Tailwind CSS</span>{" "}
-                on the frontend,{" "}
-                <span className="font-semibold">FastAPI + PostgreSQL</span> on the
-                backend.
-              </p>
-
-              <p className="text-xl leading-relaxed text-white">
-                I like problems where the{" "}
-                <span className="font-semibold">database design</span>, the{" "}
-                <span className="font-semibold">API</span>, and the{" "}
-                <span className="font-semibold">UI</span> all have to line up —
-                where getting the details right matters to the people using it
-                daily.
-              </p>
-
-              {/* Currently */}
-              <div className="pt-3">
-                <p
-                  className="text-lg uppercase tracking-[0.15em] text-white font-bold mb-3"
-                  style={{ fontFamily: '"Times New Roman", Times, serif' }}
-                >
-                  Currently
-                </p>
-                <ul className="space-y-2">
-                  <Bullet>
-                    Building a{" "}
-                    <span className="font-semibold">
-                      real-estate platform
-                    </span>{" "}
-                    with React, FastAPI, and PostgreSQL
-                  </Bullet>
-                  <Bullet>
-                    Running my own development practice —{" "}
-                    <span className="font-semibold">design, code, deploy, support</span>
-                  </Bullet>
-                  <Bullet>
-                    Deepening backend skills:{" "}
-                    <span className="font-semibold">API design, auth, database modeling</span>
-                  </Bullet>
-                </ul>
+            {/* Flagship Platform Callout */}
+            <div className="p-4 rounded-xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/60">
+              <div className="flex items-center gap-2 text-blue-700 dark:text-blue-300 font-semibold text-xs sm:text-sm mb-1.5">
+                <Building2 className="w-4 h-4 shrink-0" />
+                <span>Flagship Platform</span>
               </div>
-
-              {/* Goals */}
-              <div className="pt-1">
-                <p
-                  className="text-lg uppercase tracking-[0.15em] text-white font-bold mb-3"
-                  style={{ fontFamily: '"Times New Roman", Times, serif' }}
-                >
-                  Goals for 2026
-                </p>
-                <ul className="space-y-2">
-                  <Bullet>
-                    Launch the real-estate platform and{" "}
-                    <span className="font-semibold">onboard the first paying customers</span>
-                  </Bullet>
-                  <Bullet>
-                    Contribute to an{" "}
-                    <span className="font-semibold">open-source Python or React project</span>
-                  </Bullet>
-                  <Bullet>
-                    <span className="font-semibold">Mentor junior developers</span>{" "}
-                    on larger-scale systems
-                  </Bullet>
-                </ul>
+              <p className="text-xs sm:text-sm font-bold text-gray-900 dark:text-white">
+                Real-Estate Listing & Rental Management System
+              </p>
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-1 leading-relaxed">
+                An end-to-end platform managing property directories, tenant onboarding, automated digital lease agreements, rent tracking, and property manager dashboards.
+              </p>
+              <div className="flex flex-wrap gap-1.5 mt-3">
+                {["React", "Vite", "Tailwind CSS", "FastAPI", "PostgreSQL", "SQLAlchemy"].map((t) => (
+                  <span
+                    key={t}
+                    className="text-[11px] font-mono bg-white dark:bg-gray-900 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 px-2 py-0.5 rounded-md"
+                  >
+                    {t}
+                  </span>
+                ))}
               </div>
+            </div>
 
+            {/* Core Competencies Checklist */}
+            <div className="space-y-2 text-xs sm:text-sm text-gray-700 dark:text-gray-300 pt-1">
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <span>Building fast, responsive, and accessible user interfaces with React and Tailwind CSS</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <span>Engineering secure RESTful APIs with FastAPI, Pydantic validation, and JWT authentication</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <span>Relational database design, query optimization, and schema migrations with PostgreSQL</span>
+              </div>
             </div>
           </div>
+
+          {/* Bottom Action Buttons */}
+          <div className="pt-6 mt-6 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row items-center gap-3">
+            <button
+              onClick={onOpenResume}
+              className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm font-semibold transition-colors cursor-pointer shadow-sm"
+            >
+              <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              <span>View Full Resume (CV)</span>
+            </button>
+
+            <a
+              href="#contact"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-colors shadow-sm"
+            >
+              <Send className="w-3.5 h-3.5" />
+              <span>Get in Touch</span>
+            </a>
+          </div>
         </div>
+
       </div>
     </section>
-  );
-}
-
-function Bullet({ children }) {
-  return (
-    <li
-      className="flex gap-3 text-white text-lg leading-relaxed"
-      style={{ fontFamily: '"Times New Roman", Times, serif' }}
-    >
-      <span className="mt-3 w-1.5 h-1.5 rounded-full bg-[#14b8a6] shrink-0" />
-      <span>{children}</span>
-    </li>
   );
 }

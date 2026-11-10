@@ -2,9 +2,9 @@
   "degrees": [
     {
       "degree": "B.Sc. in Computer Science",
-      "institution": "University Name",
+      "institution": "Injibara University",
       "period": "2016 — 2020",
-      "location": "Addis Ababa, Ethiopia",
+      "location": "Amhara, Ethiopia",
       "relevantCourses": [
         "Data Structures & Algorithms",
         "Database Systems",
@@ -19,19 +19,19 @@
       "name": "Meta Front-End Developer Professional Certificate",
       "issuer": "Coursera / Meta",
       "year": "2023",
-      "url": "https://coursera.org/verify/your-cert-id"
+      "url": "https://coursera.org"
     },
     {
       "name": "FastAPI: Modern Python Web Development",
       "issuer": "Udemy",
       "year": "2022",
-      "url": "https://udemy.com/certificate/your-id"
+      "url": "https://udemy.com"
     },
     {
       "name": "AWS Certified Cloud Practitioner",
       "issuer": "Amazon Web Services",
       "year": "2023",
-      "url": "https://aws.amazon.com/verification"
+      "url": "https://aws.amazon.com"
     }
   ]
 }

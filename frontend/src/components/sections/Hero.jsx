@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react";
+import {
+  ArrowRight,
+  Mail,
+  FileText,
+  CheckCircle2
+} from "lucide-react";
 import profile from "../../data/profile.json";
 
 const TYPING_PHRASES = [
-  "a Full-Stack Developer",
-  "a React + FastAPI builder",
-  "an API designer",
-  "a problem solver",
+  "Full-Stack Web Developer",
+  "React & Tailwind CSS Builder",
+  "FastAPI & Python Developer",
+  "PostgreSQL Database Architect",
 ];
 
-function useTypewriter(phrases, typeSpeed = 80, deleteSpeed = 40, pauseMs = 1600) {
+function useTypewriter(phrases, typeSpeed = 75, deleteSpeed = 35, pauseMs = 1800) {
   const [index, setIndex] = useState(0);
   const [text, setText] = useState("");
   const [deleting, setDeleting] = useState(false);
@@ -38,107 +44,120 @@ function useTypewriter(phrases, typeSpeed = 80, deleteSpeed = 40, pauseMs = 1600
   return text;
 }
 
-export default function Hero() {
+export default function Hero({ onOpenResume }) {
   const typed = useTypewriter(TYPING_PHRASES);
+
+  const highlights = [
+    "3+ years building production web apps",
+    "Full-Stack: React, FastAPI, PostgreSQL",
+    "RESTful API design with JWT authentication",
+    "Cloud deployments on Vercel & Render",
+  ];
 
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 transition-colors"
     >
-      {/* Content */}
-      <div className="relative max-w-[1800px] mx-auto px-6 py-16 md:py-24 w-full">
-        <div className="grid md:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 xl:gap-16 items-stretch md:min-h-[500px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
-          {/* LEFT — text */}
-          <div className="relative w-full h-full">
-            <div className="relative h-full p-0">
+          {/* Mobile Profile Photo */}
+          <div className="flex lg:hidden justify-center">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-lg border-2 border-white/80 dark:border-gray-800">
+              <img
+                src={profile.avatar}
+                alt={profile.name}
+                className="w-full h-full object-cover object-top"
+                loading="eager"
+              />
+            </div>
+          </div>
 
-              <div
-                className="relative flex flex-col justify-center gap-4 md:gap-5 h-full"
-                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+          {/* Left Text Column */}
+          <div className="lg:col-span-7 text-center lg:text-left">
+            {/* Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight">
+              Hi, I'm <span className="text-blue-600 dark:text-blue-500">{profile.name}</span>
+            </h1>
+
+            {/* Dynamic Role */}
+            <div className="mt-2 text-base sm:text-xl font-medium text-gray-700 dark:text-gray-300 flex items-center justify-center lg:justify-start gap-2 h-8">
+              <span>I build web applications as</span>
+              <span className="text-blue-600 dark:text-blue-400 font-semibold">{typed}</span>
+              <span className="text-blue-600 dark:text-blue-400 animate-blink font-bold">|</span>
+            </div>
+
+            {/* Tagline */}
+            <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Self-taught full-stack developer building real-estate and rental management platforms with React, FastAPI, and PostgreSQL. Focused on clean architecture, reliable APIs, and responsive interfaces.
+            </p>
+
+            {/* Highlights Grid */}
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-w-xl mx-auto lg:mx-0 text-left">
+              {highlights.map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-2 text-xs sm:text-sm text-gray-700 dark:text-gray-300 bg-white/60 dark:bg-gray-900/60 backdrop-blur-xs p-2 rounded-lg border border-slate-200/50 dark:border-gray-800/50"
+                >
+                  <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Action Buttons */}
+            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3">
+              <a
+                href="#projects"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm"
               >
+                <span>View My Work</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
 
-                <p className="text-2xl md:text-3xl font-bold text-white leading-snug">
-                  Hi, I'm Melkamu Enyew <span className="inline-block">👋</span>
-                </p>
+              <button
+                onClick={onOpenResume}
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm text-gray-700 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-800 transition-colors cursor-pointer"
+              >
+                <FileText className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                <span>View Resume</span>
+              </button>
 
-                <p className="text-lg md:text-xl font-mono h-8 flex items-center -mt-1">
-                  <span className="text-[#14b8a6]">I'm also&nbsp;</span>
-                  <span className="text-white">{typed}</span>
-                  <span className="text-[#14b8a6] animate-blink ml-0.5">▊</span>
-                </p>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-medium border border-gray-300 dark:border-gray-700 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm text-gray-700 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-900 transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span>Contact</span>
+              </a>
+            </div>
+          </div>
 
-                <div className="w-12 h-px bg-[#334155]" />
+          {/* Desktop Right Photo Card */}
+          <div className="hidden lg:block lg:col-span-5">
+            <div className="relative mx-auto max-w-[380px]">
+              <div className="rounded-2xl overflow-hidden border border-slate-200/80 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg">
+                <img
+                  src={profile.avatar}
+                  alt={profile.name}
+                  className="w-full aspect-[4/5] object-cover object-top select-none"
+                  loading="eager"
+                />
 
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.3]">
-                  <span className="text-white">Building </span>
-                  <span className="text-gradient">scalable web apps</span>
-                  <span className="text-white"> with clean architecture and thoughtful UX.</span>
-                </h1>
-
-                <p className="text-lg md:text-xl text-white max-w-xl leading-relaxed">
-                  I turn complex requirements into clean, scalable products —
-                  designing APIs with FastAPI, building interfaces with React,
-                  and shipping them end-to-end to the cloud.
-                </p>
-
-                <div className="grid grid-cols-2 gap-x-4 md:gap-x-6 gap-y-3 md:gap-y-4 pt-1 max-w-xl">
-                  {[
-                    "3+ years building production apps",
-                    "React · FastAPI · PostgreSQL",
-                    "REST API design & auth systems",
-                    "Deployment on Vercel & Render",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-start gap-2 text-base md:text-lg text-white"
-                    >
-                      <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#14b8a6] shrink-0" />
-                      <span className="leading-snug">{item}</span>
-                    </div>
-                  ))}
+                <div className="p-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
+                  <div>
+                    <p className="text-gray-900 dark:text-white font-bold text-sm">{profile.name}</p>
+                    <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">Full-Stack Web Developer</p>
+                  </div>
+                  <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2.5 py-1 rounded-md font-mono">
+                    React · FastAPI
+                  </span>
                 </div>
-
-                <div className="flex flex-wrap gap-3 pt-2">
-                  <a
-                    href="#projects"
-                    className="group inline-flex items-center gap-2 bg-gradient-to-br from-[#14b8a6] to-[#0ea5e9] hover:opacity-90 text-[#0f172a] text-base font-semibold px-6 py-3 rounded-lg transition-opacity outline-none focus:outline-none"
-                  >
-                    View my work
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="group-hover:translate-x-0.5 transition-transform">
-                      <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                  </a>
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center gap-2 text-base font-medium text-white border border-[#334155] hover:border-zinc-500 hover:bg-[#0f172a] px-6 py-3 rounded-lg transition-colors outline-none focus:outline-none"
-                  >
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                      <path d="M22 6l-10 7L2 6" />
-                    </svg>
-                    Email me
-                  </a>
-                </div>
-
               </div>
             </div>
           </div>
 
-          {/* RIGHT — photo */}
-          <div className="relative w-full h-full">
-            <div className="relative h-full rounded-2xl overflow-hidden">
-              <img
-                src={profile.avatar}
-                alt={profile.name}
-                width={720}
-                height={720}
-                className="block w-full h-full object-cover object-top select-none"
-                draggable="false"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>
